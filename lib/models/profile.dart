@@ -10,14 +10,14 @@ class Profile {
   String fotoAsset;
 
   Profile({
-    this.nama = 'Nama Mahasiswa',
-    this.nim = 'NIM',
-    this.prodi = 'Program Studi',
-    this.kelas = 'Kelas',
-    this.bio = 'Tuliskan bio singkat kamu.',
-    this.email = 'email@example.com',
-    this.nomorHp = '081234567890',
-    this.github = 'username',
+    this.nama = 'Arjuna Meiureksa',
+    this.nim = '1124160226',
+    this.prodi = 'Teknik Informatika',
+    this.kelas = 'Software Engineering',
+    this.bio = 'main game dikit ama ngoding',
+    this.email = 'jonazhell06@gmail.com',
+    this.nomorHp = '085697136932',
+    this.github = 'https://github.com/iamjonaz',
     this.fotoAsset = 'assets/images/foto_profil.jpg',
   });
 }
