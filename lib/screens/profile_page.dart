@@ -8,6 +8,15 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profil Mahasiswa'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            tooltip: 'Tentang Saya',
+            onPressed: () {
+              Navigator.pushNamed(context, '/about');
+            },
+          ),
+        ],
       ),
 
       body: SingleChildScrollView(
