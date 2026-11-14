@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 
       themeMode: ThemeMode.system,
 
-      initialRoute: '/login',
+      initialRoute: '/profile',
 
       routes: {
         '/login': (context) => const LoginPage(),
