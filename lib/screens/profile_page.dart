@@ -22,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
       nim: '1124160226',
       prodi: 'Teknik Informatika',
       kelas: 'Software Engineering',
-      bio: 'main game dikit ama ngoding',
+      bio: 'saya adalah mahasiswa Teknik Informatika, yang memiliki ketertarikan pada dunia Teknologi Pemrograman, dan Pengembangan Aplikasi Mobile. ',
       email: 'jonazhell06@gmail.com',
       nomorHp: '085697136932',
       github: 'iamjonaz',
@@ -95,7 +95,7 @@ void editProfile() async {
 
             Text('NIM: ${profile.nim}'),
             Text('Program Studi: ${profile.prodi}'),
-            Text('Kelas: ${profile.kelas}'),
+            Text('Konsentrasi: ${profile.kelas}'),
 
             const SizedBox(height: 24),
 

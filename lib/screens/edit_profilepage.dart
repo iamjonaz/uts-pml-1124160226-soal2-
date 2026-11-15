@@ -107,7 +107,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
               buildField(
                 kelasController,
-                'Kelas',
+                'Konsentrasi',
               ),
 
               buildField(
