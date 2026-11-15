@@ -62,20 +62,23 @@ class _EditProfilePageState extends State<EditProfilePage> {
     super.dispose();
   }
 
-  void simpanProfil() {
-    if (formKey.currentState!.validate()) {
-      widget.profile.nama = namaController.text;
-      widget.profile.nim = nimController.text;
-      widget.profile.prodi = prodiController.text;
-      widget.profile.kelas = kelasController.text;
-      widget.profile.bio = bioController.text;
-      widget.profile.email = emailController.text;
-      widget.profile.nomorHp = nomorHpController.text;
-      widget.profile.github = githubController.text;
+void simpanProfil() {
+  if (formKey.currentState!.validate()) {
+    final dataBaru = Profile(
+      nama: namaController.text,
+      nim: nimController.text,
+      prodi: prodiController.text,
+      kelas: kelasController.text,
+      bio: bioController.text,
+      email: emailController.text,
+      nomorHp: nomorHpController.text,
+      github: githubController.text,
+      fotoAsset: widget.profile.fotoAsset,
+    );
 
-      Navigator.pop(context, true);
-    }
+    Navigator.pop(context, dataBaru);
   }
+}
 
   @override
   Widget build(BuildContext context) {
@@ -162,23 +165,34 @@ Widget buildField(
         border: const OutlineInputBorder(),
       ),
       validator: (value) {
-        if (value == null || value.isEmpty) {
+        if (value == null || value.trim().isEmpty) {
           return '$label wajib diisi';
         }
 
         if (label == 'Email') {
-          if (!value.contains('@') || !value.contains('.')) {
+          if (!value.contains('@') ||
+              !value.contains('.') ||
+              value.startsWith('@') ||
+              value.endsWith('.')) {
             return 'Masukkan email yang valid';
           }
         }
 
         if (label == 'Nomor HP') {
-          if (value.length < 10) {
-            return 'Nomor HP minimal 10 karakter';
+          bool hanyaAngka = value
+              .split('')
+              .every((karakter) => '0123456789'.contains(karakter));
+
+          if (!hanyaAngka) {
+            return 'Nomor HP hanya boleh angka';
+          }
+
+          if (value.length < 10 || value.length > 13) {
+            return 'Nomor HP harus 10-13 digit';
           }
         }
 
-          return null;
+        return null;
         },
       ),
     );

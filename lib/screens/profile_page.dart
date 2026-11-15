@@ -30,7 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
 void editProfile() async {
-  final result = await Navigator.push(
+  final Profile? dataBaru = await Navigator.push<Profile>(
     context,
     MaterialPageRoute(
       builder: (context) => EditProfilePage(
@@ -39,8 +39,10 @@ void editProfile() async {
     ),
   );
 
-  if (result == true) {
-    setState(() {});
+  if (dataBaru != null) {
+    setState(() {
+      profile = dataBaru;
+    });
 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
