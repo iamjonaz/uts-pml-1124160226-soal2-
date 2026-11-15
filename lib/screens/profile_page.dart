@@ -29,20 +29,26 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  void editProfile() async {
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => EditProfilePage(
-          profile: profile,
-        ),
+void editProfile() async {
+  final result = await Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => EditProfilePage(
+        profile: profile,
+      ),
+    ),
+  );
+
+  if (result == true) {
+    setState(() {});
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Profil berhasil diperbarui'),
       ),
     );
-
-    if (result == true) {
-      setState(() {});
-    }
   }
+}
 
   @override
   Widget build(BuildContext context) {

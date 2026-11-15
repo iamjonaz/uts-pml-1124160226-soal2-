@@ -147,28 +147,36 @@ class _EditProfilePageState extends State<EditProfilePage> {
     );
   }
 
-  Widget buildField(
-    TextEditingController controller,
-    String label, {
-    int maxLines = 1,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: TextFormField(
-        controller: controller,
-        maxLines: maxLines,
-        decoration: InputDecoration(
-          labelText: label,
-          border: const OutlineInputBorder(),
-        ),
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return '$label wajib diisi';
-          }
+Widget buildField(
+  TextEditingController controller,
+  String label, {
+  int maxLines = 1,
+}) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 16),
+    child: TextFormField(
+      controller: controller,
+      maxLines: maxLines,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+      ),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return '$label wajib diisi';
+        }
 
-          if (label == 'Email' && !value.contains('@')) {
-            return 'Email harus menggunakan @';
+        if (label == 'Email') {
+          if (!value.contains('@') || !value.contains('.')) {
+            return 'Masukkan email yang valid';
           }
+        }
+
+        if (label == 'Nomor HP') {
+          if (value.length < 10) {
+            return 'Nomor HP minimal 10 karakter';
+          }
+        }
 
           return null;
         },
