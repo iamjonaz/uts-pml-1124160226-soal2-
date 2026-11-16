@@ -58,12 +58,9 @@ Aplikasi ini memiliki empat halaman utama, yaitu Login, Profil, Edit Profil, dan
 - Dart
 - Material Design 3
 
-## Struktur Folder
+## Struktur Folder Lib
 
 ```text
-soal2-profil-app/
-├── assets/
-│   └── images/
 ├── lib/
 │   ├── main.dart
 │   ├── theme_controller.dart
@@ -76,10 +73,6 @@ soal2-profil-app/
 │   │   └── about_page.dart
 │   └── widgets/
 │       └── info_tile.dart
-├── screenshots/
-├── android/
-└── pubspec.yaml
-```
 
 ## Penyimpanan Data
 
