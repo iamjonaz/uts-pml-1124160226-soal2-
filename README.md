@@ -131,5 +131,5 @@ UTS PML – Aplikasi Profil – Arjuna Meiureksa – 1124160226
 
 Link YouTube:
 
-[Tautan Download APK – v1.0.0](GANTI_DENGAN_LINK_RELEASE_LU)
+[Video Presentasi di YouTube](https://youtu.be/965idDGCNw0)
 
