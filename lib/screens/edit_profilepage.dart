@@ -95,7 +95,7 @@ void simpanProfil() {
             children: [
               buildField(
                 namaController,
-                'Nama',
+                'NAMA',
               ),
 
               buildField(
