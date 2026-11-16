@@ -73,6 +73,7 @@ Aplikasi ini memiliki empat halaman utama, yaitu Login, Profil, Edit Profil, dan
 │   │   └── about_page.dart
 │   └── widgets/
 │       └── info_tile.dart
+```
 
 ## Penyimpanan Data
 
