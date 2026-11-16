@@ -33,24 +33,24 @@ Aplikasi ini memiliki empat halaman utama, yaitu Login, Profil, Edit Profil, dan
 
 ### 1. Halaman Login
 
-![Login](screenshots/login.jpg)
+![Login](lib/screenshots/login.jpg)
 
 ### 2. Halaman Profil
 
-![Profil](screenshots/profil.jpg)
+![Profil](lib/screenshots/profil.jpg)
 
 ### 3. Halaman Edit Profil
 
-![Edit Profil](screenshots/edit_profil.jpg)
+![Edit Profil](lib/screenshots/edit_profil.jpg)
 
 ### 4. Halaman Tentang Saya
 
-![Tentang Saya](screenshots/about.jpg)
-![Tentang Saya](screenshots/about1.jpg)
+![Tentang Saya](lib/screenshots/about.jpg)
+![Tentang Saya](lib/screenshots/about1.jpg)
 
 ### 5. Halaman Drawer
 
-![Drawer](screenshots/drawer.jpg)
+![Drawer](lib/screenshots/drawer.jpg)
 
 ## Teknologi yang Digunakan
 
