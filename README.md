@@ -127,7 +127,7 @@ Versi aplikasi: **v1.0.0**
 
 Link GitHub Release:
 
-[Tautan Download APK – v1.0.0](GANTI_DENGAN_LINK_RELEASE_LU)
+[Download Aplikasi Arjuna Meiureksa](https://github.com/iamjonaz/uts-pml-1124160226-soal2-/releases/tag/v1.0.0)
 
 ## Video Presentasi
 
