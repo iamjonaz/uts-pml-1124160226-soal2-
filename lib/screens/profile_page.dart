@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../widgets/info_tile.dart';
 import '../models/profile.dart';
 import '../theme_controller.dart';
 import 'edit_profilepage.dart';
@@ -74,6 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profil Mahasiswa'),
+
         actions: [
           // Tombol Edit Profil
           IconButton(
@@ -237,32 +239,32 @@ class _ProfilePageState extends State<ProfilePage> {
 
             const SizedBox(height: 16),
 
-            // Informasi Kontak
+            // Informasi Kontak menggunakan InfoTile
             Card(
               child: Column(
                 children: [
-                  ListTile(
-                    leading: const Icon(Icons.email),
-                    title: const Text('Email'),
-                    subtitle: Text(profile.email),
+                  InfoTile(
+                    icon: Icons.email,
+                    label: 'Email',
+                    value: profile.email,
                   ),
 
-                  ListTile(
-                    leading: const Icon(Icons.phone),
-                    title: const Text('Nomor HP'),
-                    subtitle: Text(profile.nomorHp),
+                  InfoTile(
+                    icon: Icons.phone,
+                    label: 'Nomor HP',
+                    value: profile.nomorHp,
                   ),
 
-                  ListTile(
-                    leading: const Icon(Icons.school),
-                    title: const Text('Program Studi'),
-                    subtitle: Text(profile.prodi),
+                  InfoTile(
+                    icon: Icons.school,
+                    label: 'Program Studi',
+                    value: profile.prodi,
                   ),
 
-                  ListTile(
-                    leading: const Icon(Icons.code),
-                    title: const Text('GitHub'),
-                    subtitle: Text(profile.github),
+                  InfoTile(
+                    icon: Icons.code,
+                    label: 'GitHub',
+                    value: profile.github,
                   ),
                 ],
               ),

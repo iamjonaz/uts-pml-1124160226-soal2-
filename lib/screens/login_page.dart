@@ -15,23 +15,25 @@ class _LoginPageState extends State<LoginPage> {
 
   bool isLoading = false;
 
-  void login() {
-    if (!_formKey.currentState!.validate()) {
-      return;
-    }
-
-    setState(() {
-      isLoading = true;
-    });
-
-    Future.delayed(const Duration(seconds: 2), () {
-      setState(() {
-        isLoading = false;
-      });
-
-      Navigator.pushReplacementNamed(context, '/profile');
-    });
+Future<void> login() async {
+  if (!_formKey.currentState!.validate()) {
+    return;
   }
+
+  setState(() {
+    isLoading = true;
+  });
+
+  await Future.delayed(const Duration(seconds: 2));
+
+  if (!mounted) return;
+
+  setState(() {
+    isLoading = false;
+  });
+
+  Navigator.pushReplacementNamed(context, '/profile');
+}
 
   @override
   Widget build(BuildContext context) {
